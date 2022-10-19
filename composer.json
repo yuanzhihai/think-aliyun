@@ -1,0 +1,39 @@
+{
+  "name": "yzh52521/think-aliyun",
+  "description": "This is a thinkphp expansion for the Aliyun",
+  "keywords": [
+    "think",
+    "aliyun"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "yuanzhihai",
+      "email": "396751927@qq.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "topthink/framework": "^6.0",
+    "guzzlehttp/guzzle": "^6.0|^7.0",
+    "ext-simplexml": "*",
+    "ext-dom": "*",
+    "ext-libxml": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "yzh52521\\Aliyun\\": "src"
+    }
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "yzh52521\\Aliyun\\Service"
+      ],
+      "config":{
+        "aliyun": "config/config.php"
+      }
+    }
+  }
+}
