@@ -29,7 +29,7 @@
   "extra": {
     "think": {
       "services": [
-        "yzh52521\\Aliyun\\Service"
+        "yzh52521\\Aliyun\\AliyunService"
       ],
       "config":{
         "aliyun": "config/config.php"

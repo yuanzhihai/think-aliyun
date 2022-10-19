@@ -11,7 +11,7 @@ class Aliyun extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeClass()
     {
         return 'aliyun';
     }
