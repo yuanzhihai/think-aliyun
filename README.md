@@ -1,4 +1,4 @@
-# thinkphp-aliyun
+# think-aliyun
 
 This is a aliyun expansion for the think
 
