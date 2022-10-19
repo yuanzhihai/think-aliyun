@@ -32,7 +32,7 @@ composer require yzh52521/think-aliyun
 
 ```php
 try {
-	$aliyun = Aliyun::service('cdn');
+	$cdn = Aliyun::service('cdn');
 	$cdn->RefreshObjectCaches([
 		'ObjectPath' => [
 			'http://www.baidu.com',
