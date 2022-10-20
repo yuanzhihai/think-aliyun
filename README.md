@@ -12,6 +12,7 @@ This is a aliyun expansion for the think
 - DM 邮件推送
 - DNS 
 - DOMAIN 域名
+- JAQ 移动安全
 - MTS 媒体转码
 - SCDN 域名操作
 - SMS短信
