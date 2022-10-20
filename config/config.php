@@ -9,6 +9,11 @@ return [
             'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
             'access_key' => env( 'ALIYUN_ACCESS_KEY' ),
         ],
+        'cloudauth' => [
+            'driver'     => 'cloudAuth',
+            'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
+            'access_key' => env( 'ALIYUN_ACCESS_KEY' ),
+        ],
         'cloudpush' => [
             'driver'     => 'cloudPush',
             'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
@@ -26,6 +31,16 @@ return [
         ],
         'domain'    => [
             'driver'     => 'domain',
+            'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
+            'access_key' => env( 'ALIYUN_ACCESS_KEY' )
+        ],
+        'green'       => [
+            'driver'     => 'green',
+            'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
+            'access_key' => env( 'ALIYUN_ACCESS_KEY' )
+        ],
+        'httpdns'       => [
+            'driver'     => 'httpDns',
             'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
             'access_key' => env( 'ALIYUN_ACCESS_KEY' )
         ],

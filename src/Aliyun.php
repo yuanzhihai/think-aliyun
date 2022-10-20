@@ -5,10 +5,13 @@ namespace yzh52521\Aliyun;
 use InvalidArgumentException;
 use think\helper\Arr;
 use think\Manager;
+use yzh52521\Aliyun\Services\CloudAuth;
 use yzh52521\Aliyun\Services\CloudPush;
 use yzh52521\Aliyun\Services\Dm;
 use yzh52521\Aliyun\Services\Dns;
 use yzh52521\Aliyun\Services\Domain;
+use yzh52521\Aliyun\Services\Green;
+use yzh52521\Aliyun\Services\HttpDns;
 use yzh52521\Aliyun\Services\Jaq;
 use yzh52521\Aliyun\Services\Live;
 use yzh52521\Aliyun\Services\Cdn;
@@ -99,6 +102,19 @@ class Aliyun extends Manager
     }
 
     /**
+     * 创建 CloudAuth 服务
+     * @param array $config
+     * @return CloudAuth
+     */
+    public function createCloudAuthService(array $config)
+    {
+        return new CloudAuth( [
+            'accessId'  => $config['access_id'],
+            'accessKey' => $config['access_key'],
+        ] );
+    }
+
+    /**
      * 创建 CloudPush 服务
      * @param array $config
      * @return CloudPush
@@ -148,6 +164,33 @@ class Aliyun extends Manager
     public function createDmService(array $config)
     {
         return new Dm( [
+            'accessId'  => $config['access_id'],
+            'accessKey' => $config['access_key'],
+        ] );
+    }
+
+    /**
+     * 创建 Green 服务
+     * @param array $config
+     * @return Green
+     */
+    public function createGreenService(array $config)
+    {
+        return new Green( [
+            'accessId'  => $config['access_id'],
+            'accessKey' => $config['access_key'],
+            'regionId'  => $config['region_id'] ?? 'cn-hangzhou'
+        ] );
+    }
+
+    /**
+     * 创建 HttpDns 服务
+     * @param array $config
+     * @return HttpDns
+     */
+    public function createHttpDnsService(array $config)
+    {
+        return new HttpDns( [
             'accessId'  => $config['access_id'],
             'accessKey' => $config['access_key'],
         ] );
