@@ -24,7 +24,7 @@ class Green extends BaseService
     /**
      * @var string 绿网接口版本，当前版本为：2017-01-12
      */
-    public $version = '2017-01-12';
+    public $version = '2018-05-09';
 
     /**
      * @var string 可用区
@@ -57,7 +57,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->post( '/green/image/scan',[
+        return $this->postJSON( '/green/image/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'porn','terrorism'
@@ -75,7 +75,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->post( '/green/image/scan',[
+        return $this->postJSON( '/green/image/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'oci'
@@ -93,7 +93,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->post( '/green/image/scan',[
+        return $this->postJSON( '/green/image/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'sface'
@@ -111,7 +111,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->post( '/green/text/scan',[
+        return $this->postJSON( '/green/text/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'antispam'
@@ -129,7 +129,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->post( '/green/text/scan',[
+        return $this->postJSON( '/green/text/scan',[
             'tasks'  => $tasks,
             'scenes' => [
                 'keyword'
