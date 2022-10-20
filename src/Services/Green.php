@@ -57,7 +57,8 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->postJSON( '/green/image/scan',[
+
+        return $this->post( '/green/image/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'porn','terrorism'
@@ -75,7 +76,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->postJSON( '/green/image/scan',[
+        return $this->post( '/green/image/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'oci'
@@ -93,7 +94,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->postJSON( '/green/image/scan',[
+        return $this->post( '/green/image/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'sface'
@@ -111,7 +112,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->postJSON( '/green/text/scan',[
+        return $this->post( '/green/text/scan',[
             "tasks"  => $tasks,
             "scenes" => [
                 'antispam'
@@ -129,7 +130,7 @@ class Green extends BaseService
         foreach ( $tasks as $key => $val ) {
             if (!isset( $val['dataId'] )) $tasks[$key]['dataId'] = uniqid();
         }
-        return $this->postJSON( '/green/text/scan',[
+        return $this->post( '/green/text/scan',[
             'tasks'  => $tasks,
             'scenes' => [
                 'keyword'

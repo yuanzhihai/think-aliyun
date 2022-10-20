@@ -63,7 +63,7 @@ class AcsStack
         $params['x-acs-signature-nonce']   = uniqid();
         $params['x-acs-region-id']         = $this->config['regionId'];
         $params['Accept']                  = 'application/json';
-        $params['Format']                  = 'JSON';
+        $params['Content-Type']            = 'application/json';
 
         $signString = strtoupper( $request->getMethod() )."\n";
         if (isset( $params["Accept"] )) {
