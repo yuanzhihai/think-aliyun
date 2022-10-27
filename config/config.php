@@ -79,6 +79,11 @@ return [
             'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
             'access_key' => env( 'ALIYUN_ACCESS_KEY' )
         ],
+        'dypns'       => [
+            'driver'     => 'dypns',
+            'access_id'  => env( 'ALIYUN_ACCESS_ID' ),
+            'access_key' => env( 'ALIYUN_ACCESS_KEY' )
+        ],
 
     ],
 
